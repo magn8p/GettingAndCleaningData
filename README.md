@@ -17,16 +17,16 @@ From the data set in step 4, creates a second, independent tidy data set with th
 Step 0. Initialisation step to check if the resource directory already exists locally, if not download and extract
 
 
-Step 1. Merge the training and the test sets to create a unified data set.
+Step 1. Merge the training and the test sets using ```rbind``` to create a unified data set.
 
 
-Step 2. Extract the measurements on the mean and std dev for each measurement.
+Step 2. Extract the measurements on the mean (```mean()```) and std dev(```std```) for each measurement using ```grep```.
 
 
-Step 3. Add descriptive activity names to name the activities in the data set
+Step 3. Add descriptive activity names to name the activities in the data set by loading activity labels and replacing indices with names.
 
 
-Step 4. Add appropriate labels to the data set with descriptive activity names.
+Step 4. Add appropriate labels to the data set with descriptive activity names by combining the labels and data set using ```cbind```.
 
 
-Step 5. A second, independent tidy data set with the average of each variable for each activity and each subject.
+Step 5. A second, independent tidy data set with the average of each variable for each activity and each subject - using ```aggregate``` and ```mean``` functions.
