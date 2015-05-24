@@ -47,7 +47,8 @@ write.csv(mean_and_std_with_labels, file='assignment/GCD_Project_result4.csv')
 subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt", col.names = c('subject'))
 subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt", col.names = c('subject'))
 subject <- rbind(subject_test, subject_train)
-averages <- aggregate(X, by = list(activity = y[,1], subject = subject[,1]), mean)
+averages <- aggregate(mean_and_std_with_labels, by = list(activity = y[,1], subject = subject[,1]), mean)
+averages <- averages[, colSums(is.na(averages)) != nrow(averages)]
 
 write.table(averages, file='assignment/GCD_Project_result5.txt', row.names=FALSE)
 write.csv(averages, file='assignment/GCD_Project_result5.csv')

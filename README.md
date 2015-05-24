@@ -29,4 +29,4 @@ Step 3. Add descriptive activity names to name the activities in the data set by
 Step 4. Add appropriate labels to the data set with descriptive activity names by combining the labels and data set using ```cbind```.
 
 
-Step 5. A second, independent tidy data set with the average of each variable for each activity and each subject - using ```aggregate``` and ```mean``` functions.
+Step 5. A second, independent tidy data set with the average of each variable for each activity and each subject - ```aggregate``` and ```mean``` functions applied on the data set obtained in Step 4 which results in a 180 x 68 matrix.
