@@ -5,6 +5,15 @@ In order to reproduce the results presented in GCD_Project_result5.txt, please r
 
 All the column names have been derived from the original information provided in the features_info.txt file provided along with the data set. The values presented in the table calculate the average(mean) of each subject averaging over every activity and variable.
 
+
+*Activity* - String and indicates the activity performed by the subject when the observation has been made.
+
+
+*Subject* - Numeric and points to the subject ID (total of 30).
+
+
+*Other Column labels* - Means and standard deviations of time domain and frequency domain measurements, details can be found below.
+
 “
 Feature Selection 
 =================
