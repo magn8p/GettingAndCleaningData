@@ -41,6 +41,7 @@ for (i in 1:nrow(labels)) {
 # 4. Add appropriate labels to the data set with descriptive activity names. 
 X_with_labels <- cbind(y, X)
 mean_and_std_with_labels <- cbind(y, mean_and_std)
+write.csv(mean_and_std_with_labels, file='assignment/GCD_Project_result4.csv')
 
 # 5. A second, independent tidy data set with the average of each variable for each activity and each subject. 
 subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt", col.names = c('subject'))
@@ -48,4 +49,5 @@ subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt", col.nam
 subject <- rbind(subject_test, subject_train)
 averages <- aggregate(X, by = list(activity = y[,1], subject = subject[,1]), mean)
 
-write.csv(averages, file='assignment/GCD_Project_result.txt', row.names=FALSE)
+write.table(averages, file='assignment/GCD_Project_result5.txt', row.names=FALSE)
+write.csv(averages, file='assignment/GCD_Project_result5.csv')
